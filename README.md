@@ -46,6 +46,25 @@
 - [Claude Code 安装指南](https://docs.claude.com/docs/claude-code)
 - [Codex CLI 安装指南](https://developers.openai.com/codex/quickstart)
 
+
+请确保您已成功安装[uv工具](https://docs.astral.sh/uv/getting-started/installation/)：
+
+- Windows
+  在Powershell中运行以下命令：
+  ```
+  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  ```
+
+- Linux/macOS
+  使用curl/wget下载并安装:
+  ```
+  curl -LsSf https://astral.sh/uv/install.sh | sh #使用curl
+
+  wget -qO- https://astral.sh/uv/install.sh | sh #使用wget
+  ```
+
+**注意，我们极力推荐Windows用户在WSL中运行本项目！**
+
 <!-- 如果您正在为订阅和配置而忧愁，我们非常欢迎您[积极联系我们](https://cc.guda.studio)。 -->
 
 ### 1. 安装步骤

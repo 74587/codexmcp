@@ -149,12 +149,12 @@ async def codex(
         bool,
         "Return all messages (e.g. reasoning, tool calls, etc.) from the codex session. Set to `False` by default, only the agent's final reply message is returned.",
     ] = False,
-    image: Annotated[
-        Optional[List[Path]],
-        Field(
-            description="Attach one or more image files to the initial prompt. Separate multiple paths with commas or repeat the flag.",
-        ),
-    ] = None,
+    # image: Annotated[
+    #     Optional[List[Path]],
+    #     Field(
+    #         description="Attach one or more image files to the initial prompt. Separate multiple paths with commas or repeat the flag.",
+    #     ),
+    # ] = None,
     model: Annotated[
         Optional[str],
         Field(
@@ -176,8 +176,8 @@ async def codex(
     # Build command as list to avoid injection
     cmd = ["codex", "exec", "--sandbox", sandbox, "--cd", str(cd), "--json"]
     
-    if image is not None:
-        cmd.extend(["--image", ",".join(image)])
+    # if image is not None:
+    #     cmd.extend(["--image", ",".join(image)])
         
     if model is not None:
         cmd.extend(["--model", model])
